@@ -8,7 +8,6 @@ import io.kotlintest.specs.StringSpec
 class PaymentTest: StringSpec() {
 
     init {
-
         "buyDonut" {
             forAll(CreditCardGenerator(), Gen.choose(1, 100)) { creditCard: CreditCard, n: Int ->
                 val purchase = buyDonuts(n, creditCard)
